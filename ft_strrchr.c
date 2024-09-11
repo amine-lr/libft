@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 12:14:13 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:46:20 by mlarioui         ###   ########.fr       */
+/*   Created: 2024/09/11 12:21:12 by mlarioui          #+#    #+#             */
+/*   Updated: 2024/09/11 12:47:01 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, char c)
 {
 	size_t	i;
 
-	i = 0;
-	while (s[i] != ('\0'))
-		i++;
-	return (i);
+	i = ft_strlen (s);
+	while (i > 0)
+	{
+		i--;
+		if (s[i] == c)
+			return ((char *) &s[i]);
+	}
+	if (c == '\0')
+		return ((char *) &s[i]);
+	return (NULL);
 }
-
 /*int main()
 {
-    char *s ="bla bla";
-    int rst = ft_strlen(s);
-
-    printf ("the lenght of s is %d\n", rst);
+    char c = 'l';
+    const char *s= "bla bla";
+    char    *rslt = ft_strrchr(s, c);
+    
+    if (rslt != NULL)
+        printf("Character %c found in %s: %s\n", c, s, rslt);
+    else
+        printf("Character %c not fount in %s\n", c, s);
     return (0);
 }*/
