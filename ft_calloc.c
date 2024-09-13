@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 15:03:22 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 13:41:07 by mlarioui         ###   ########.fr       */
+/*   Created: 2024/09/13 17:19:05 by mlarioui          #+#    #+#             */
+/*   Updated: 2024/09/13 18:21:18 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_calloc(size_t num_elements, size_t elements_size)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	unsigned char	tot_size;
+	void			*dst;
+
+	tot_size = num_elements * elements_size;
+	dst = malloc(tot_size);
+	if (!dst)
+		return (0);
+	ft_memset(dst, 0, tot_size);
+	return (dst);
 }
-/*int main()
+/*int	main()
 {
-    int AM = '5';
-    int B = '-';
-    int D = 'F';
-    int S = 'd';
-
-    printf("%d.\n", ft_isalnum(AM));
-    printf("%d.\n", ft_isalnum(B));
-    printf("%d.\n", ft_isalnum(D));
-    printf("%d.\n", ft_isalnum(S));
-
+	size_t	num = 6;
+	size_t	size = sizeof(char) ;
+	printf("%s\n", (char *)ft_calloc(num, size));
 }*/

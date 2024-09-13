@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 15:03:22 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 13:41:07 by mlarioui         ###   ########.fr       */
+/*   Created: 2024/09/13 18:07:38 by mlarioui          #+#    #+#             */
+/*   Updated: 2024/09/13 18:19:27 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strdup(const char *s1)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	char	*dst;
+	size_t	len;
+	size_t	i;
+
+	i = 0;
+	len = ft_strlen(s1);
+	dst = (char *) malloc(len + 1);
+	if (dst == NULL)
+		return (NULL);
+	while (s1[i])
+	{
+		dst[i] = s1[i];
+		i++;
+	}
+	dst[i] = 0;
+	return (dst);
 }
-/*int main()
+/*int	main()
 {
-    int AM = '5';
-    int B = '-';
-    int D = 'F';
-    int S = 'd';
-
-    printf("%d.\n", ft_isalnum(AM));
-    printf("%d.\n", ft_isalnum(B));
-    printf("%d.\n", ft_isalnum(D));
-    printf("%d.\n", ft_isalnum(S));
-
+	char	*s1 = "Brouno";
+	printf("%s\n", ft_strdup(s1));
 }*/

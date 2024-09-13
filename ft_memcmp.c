@@ -1,23 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/13 14:05:59 by mlarioui          #+#    #+#             */
+/*   Updated: 2024/09/13 14:16:50 by mlarioui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    const unsigned char *s1_c;
-    const unsigned char *s2_c;
-    size_t  i;
+	const unsigned char		*s1_c;
+	const unsigned char		*s2_c;
+	size_t					i;
 
-    i = 0;
-    s1_c = (const unsigned char *)s1;
-    s2_c = (const unsigned char *)s2;
-    while(i < n)
-    {
-        if (s1_c[i] == s2_c[i])
-            return ( s1_c - s2_c);
-        i++;
-    }
-    return (0);
+	i = 0;
+	s1_c = (const unsigned char *)s1;
+	s2_c = (const unsigned char *)s2;
+	while (i < n)
+	{
+		if (s1_c[i] == s2_c[i])
+			return (s1_c - s2_c);
+		i++;
+	}
+	return (0);
 }
-int main()
+/*int main()
 {
     char    s1[] = "abcd";
     char    s2[] = "abch";
@@ -29,4 +41,4 @@ int main()
     else
         printf("str1 is greater than str2.\n");
     return 0;
-}
+}*/
