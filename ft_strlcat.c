@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(const char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	dest_size;
@@ -28,6 +28,13 @@ size_t	ft_strlcat(const char *dst, const char *src, size_t dstsize)
 		dst[dest_size + i] = src[i];
 		i++;
 	}
-	dst[dest_size + 1] = '\0';
+	dst[dest_size + i] = '\0';
 	return (dest_size + src_size);
 }
+/*int	main(void)
+{
+	char dst[] = "Otmane";
+	char src[] = " Boumehdi";
+	printf("%zu\n", ft_strlcat(dst, src, 15));
+	printf("%s\n", dst);
+}*/
