@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:11:08 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/16 15:07:38 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/17 13:32:20 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *str, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int num);
 #endif
