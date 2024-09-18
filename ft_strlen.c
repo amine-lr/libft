@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:14:13 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:46:20 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/18 13:11:33 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*int main()
-{
-    char *s ="bla bla";
-    int rst = ft_strlen(s);
+// int main()
+// {
+//     char *s =NULL;
+//     int rst = ft_strlen(s);
 
-    printf ("the lenght of s is %d\n", rst);
-    return (0);
-}*/
+//     printf ("the lenght of s is %d\n", rst);
+//     return (0);
+// }

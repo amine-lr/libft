@@ -64,7 +64,7 @@ static void	ft_free(char **result, int words)
 	free(result);
 }
 
-char	ft_fill_result(char **result, const char *s, char c)
+static char	ft_fill_result(char **result, const char *s, char c)
 {
 	int		i;
 	int		j;

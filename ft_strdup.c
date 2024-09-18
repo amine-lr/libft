@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 18:07:38 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 18:19:27 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/18 13:22:30 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_strdup(const char *s1)
 }
 /*int	main()
 {
-	char	*s1 = "Brouno";
-	printf("%s\n", ft_strdup(s1));
+char	*s1 = "bla bla";
+printf("%s\n", ft_strdup(s1));
 }*/
