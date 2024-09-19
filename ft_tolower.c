@@ -14,13 +14,19 @@
 
 int	ft_tolower(int c)
 {
+    if (!c)
+		return (0);
 	if (c >= 65 && c <= 90)
 		c += 32;
 	return (c);
 }
 
 /*int main() {
-    char ch = 'A';
+    char ch = 0;
+    
+    if (!ch)
+		printf("NULL");
+	else
     printf(" %c\n", ft_tolower(ch));
     return 0;
 }*/

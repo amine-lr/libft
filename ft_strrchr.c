@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, char c)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen (s);
 	while (i > 0)
 	{
@@ -30,12 +32,14 @@ char	*ft_strrchr(const char *s, char c)
 /*int main()
 {
     char c = 'l';
-    const char *s= "bla bla";
+    const char *s= NULL;
     char    *rslt = ft_strrchr(s, c);
     
     if (rslt != NULL)
         printf("Character %c found in %s: %s\n", c, s, rslt);
-    else
+    else if (!rslt)
+		printf("NULL");
+	else
         printf("Character %c not fount in %s\n", c, s);
     return (0);
 }*/

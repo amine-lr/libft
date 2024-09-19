@@ -14,6 +14,8 @@
 
 int	ft_toupper(int c)
 {
+	if (!c)
+		return (0);
 	if (c >= 97 && c <= 122)
 		c -= 32;
 	return (c);
@@ -21,7 +23,11 @@ int	ft_toupper(int c)
 
 /*int	main()
 {
-	char ch = 'F';
-    printf("Uppercase of %c is %c\n", ch, ft_toupper(ch));
+	char ch = 'r';
+
+	if (!ch)
+		printf("NULL");
+	else
+    	printf("Uppercase of %c is %c\n", ch, ft_toupper(ch));
     return (0);
 }*/
