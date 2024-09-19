@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:04:32 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:46:16 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:05:20 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isalpha(int c)
 
 /*int	main()
 {
-	char	A = 'A';
+	char	A = 0;
 	char	B = 'g';
 	char	c = '5';
 	char	d = '-';

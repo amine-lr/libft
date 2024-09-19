@@ -17,6 +17,8 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	size_t			i;
 	unsigned char	*void_ptr;
 
+	if (!ptr)
+		return (NULL);
 	void_ptr = (unsigned char *)ptr;
 	i = 0;
 	while (i < len)
@@ -26,16 +28,14 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	}
 	return (ptr);
 }
-/*int main() {
-    char buffer[10];
+/*int main(void) 
+{
+	char str[] = "Brouno";
+	//char *str = NULL; 
 
-    // Fill buffer with 'A' characters
-    ft_memset(buffer, '8', 2);
-
-    // Print buffer
-    for (int i = 0; i < 10; i++) {
-        printf("%c ", buffer[i]);
-    }
-
-    return 0;
+	ft_memset(str, '8', 5);
+	if (!str)
+		printf("Received NULL pointer.\n");
+	else
+		printf("%s\n", str);
 }*/

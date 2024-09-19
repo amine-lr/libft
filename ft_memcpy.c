@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*dst_c;
 	const unsigned char	*src_c;
 
-	if (!src && !dst)
+	if (!src || !dst)
 		return (NULL);
 	dst_c = (unsigned char *)dst;
 	src_c = (const unsigned char *)src;
@@ -28,15 +28,16 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		dst_c[i] = src_c [i];
 		i++;
 	}
-	return (dst_c);
+	return (dst);
 }
 /*int main()
 {
-    char    *src = "sniper";
+    char    *src = NULL;
     char    *dst;
 
-    ft_memcpy(dst, src, 4);
+	dst = malloc(10 * sizeof(char));
+    ft_memcpy(dst, src, 2);
     printf("src: %s\n", src);
     printf("dst: %s\n", dst);
-    return 0;
+    return (0);
 }*/

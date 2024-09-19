@@ -17,6 +17,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			i;
 	unsigned char	*s_c;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	s_c = (unsigned char *)s;
 	while (i < n)
@@ -29,11 +31,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 /*int main()
 {
-    char    data[] = "night walks";
+    char    *data = NULL;
     char    *rst ;
 
-    rst = (char *)ft_memchr(data, 'w', 10);
+    rst = (char *)ft_memchr(data, 'l', 10);
     if (rst)
         printf("found the characther at position : %ld\n", rst - data);
-    return 0;
+	else
+		printf("charachter not found");
+    return (0);
 }*/

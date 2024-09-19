@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:44:24 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:46:01 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:08:44 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isprint(int c)
 /*int	main()
 {
 	int	space = ' ';
-	int	notprint = 129;
+	int	notprint = 0;
 
 	printf("%d.\n", ft_isprint(space));
 	printf("%d.\n", ft_isprint(notprint));

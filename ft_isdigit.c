@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:35:22 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:46:31 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:07:54 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_isdigit(int c)
     int bla = '2';
     int A = 'S';
     int B = '9';
-    int f = '-';
+    int f = 0;
 
     printf("%d.\n", ft_isdigit(bla));
     printf("%d.\n", ft_isdigit(A));

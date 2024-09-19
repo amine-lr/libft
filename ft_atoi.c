@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:45:46 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 17:59:56 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:49:13 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	s = 1;
 	rst = 0;
+	if (!str)
+		return (0);
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\v'
 		|| str[i] == '\t' || str[i] == '\f' || str[i] == '\r')
 		i++;
@@ -39,12 +41,12 @@ int	ft_atoi(const char *str)
 }
 /*int	main()
 {
-	const char	*str1 = "42.99";
+	const char	*str1 = NULL;
 	const char	*str2 = "      \n	-2465rfrrg";
 
 	int	num1 = ft_atoi(str1);
 	int	num2 = ft_atoi(str2);
-	printf("converted number : %d.\n", num1);
-	printf("converted number : %d.\n", num2);
+	printf("converted number : %d\n", num1);
+	printf("converted number : %d\n", num2);
 	return (0);
 }*/

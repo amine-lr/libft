@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*d;
 	size_t	i;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (NULL);
 	s = (char *) src;
 	d = (char *) dst;
@@ -38,11 +38,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 }
 /*int main()
 {
-    char    *src = "Hello, world!";
-    char dst[20];
+    char    *src = NULL;
+    char	dst[20];
 
     ft_memmove(dst, src, 13);
-    printf("Non-overlapping test:\nSource: %s\nDestination: %s\n", src, dst);
-    
-    return 0;
+	if (src)
+    	printf("Source: %s\nDestination: %s\n", src, dst);
+    else
+		printf("src: %s", src);
+    return (0);
 }*/

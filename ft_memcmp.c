@@ -18,6 +18,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char		*s2_c;
 	size_t					i;
 
+	if (!s1 || !s2)
+	{
+		if ( !s1 && !s2)
+			return (0);
+		if (s1)
+			return (1);
+		else
+			return (-1);
+	}
 	i = 0;
 	s1_c = (const unsigned char *)s1;
 	s2_c = (const unsigned char *)s2;
@@ -31,8 +40,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 /*int main()
 {
-    char    s1[] = "abcd";
-    char    s2[] = "abch";
+    char    *s1 = NULL;
+    char    *s2 = NULL;
     int rst = ft_memcmp(s1, s2, 2);
     if (rst == 0)
         printf ("the memory block are equal.\n");

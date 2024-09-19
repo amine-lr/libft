@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:13:59 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 10:45:07 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:56:07 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ void	ft_bzero(void *s, size_t n)
 }
 /*int	main()
 {
-	char	str[] = "Bla Bla";
+	char	str[] = "Brouno";
 	int 	i = 2;
 
 	ft_bzero(str, i);
-	printf("%s.\n", str);
+	printf("%s\n", str);
 	return (0);
 }*/

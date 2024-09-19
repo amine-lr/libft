@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:03:22 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 13:41:07 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:04:06 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ int	ft_isalnum(int c)
 }
 /*int main()
 {
-    int AM = '5';
+    int AM = 0;
     int B = '-';
     int D = 'F';
     int S = 'd';
 
-    printf("%d.\n", ft_isalnum(AM));
-    printf("%d.\n", ft_isalnum(B));
-    printf("%d.\n", ft_isalnum(D));
-    printf("%d.\n", ft_isalnum(S));
-
+    printf("%d\n", ft_isalnum(AM));
+    printf("%d\n", ft_isalnum(B));
+    printf("%d\n", ft_isalnum(D));
+    printf("%d\n", ft_isalnum(S));
 }*/
