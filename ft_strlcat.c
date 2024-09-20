@@ -18,6 +18,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dest_size;
 	size_t	src_size;
 
+	if (!src)
+		return (0);
+	if (!dst && dstsize == 0)
+		return (ft_strlen(src));
 	dest_size = ft_strlen(dst);
 	src_size = ft_strlen(src);
 	if (dstsize <= dest_size)
@@ -33,8 +37,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 /*int	main(void)
 {
-	char dst[] = "Otmane";
-	char src[] = " Boumehdi";
+	char *dst = NULL;
+	char *src = NULL;
+
+	if (!dst)
+	{
+		printf("Memory allocation failed\n");
+		return (1);
+	}
+	dst[0] = '\0';
+	
 	printf("%zu\n", ft_strlcat(dst, src, 15));
 	printf("%s\n", dst);
 }*/

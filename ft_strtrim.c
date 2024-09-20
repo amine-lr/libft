@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 13:43:33 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/16 14:11:56 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:34:41 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	tr_len;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return ((char *)s1);
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
@@ -33,7 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 /*int	main ()
 {
-	char str[] = "abcdefabc";
-	char set[] = "bc";
+	char *str = "amine";
+	char *set = NULL;
 	printf("%s", ft_strtrim(str,set));
 }*/

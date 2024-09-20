@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 16:10:23 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/14 16:50:52 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:23:14 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	tot_len;
 	size_t	len_s1;
 
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	len_s1 = ft_strlen(s1);
 	tot_len = len_s1 + ft_strlen(s2);
 	str = (char *)malloc(tot_len + 1);
@@ -29,7 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 /*int main()
 {
-	char s1[] = "Brouno";
-	char s2[] = " Black";
+	char *s1 = "Brouno";
+	char *s2 = NULL;
 	printf("%s",ft_strjoin(s1,s2));
-} */
+}*/

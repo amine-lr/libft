@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 18:07:38 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/18 13:22:30 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:27:46 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	size_t	i;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s1);
 	dst = (char *) malloc(len + 1);
@@ -33,6 +35,10 @@ char	*ft_strdup(const char *s1)
 }
 /*int	main()
 {
-char	*s1 = "bla bla";
-printf("%s\n", ft_strdup(s1));
+	char	*s1 = NULL;
+	
+	if (!s1)
+		printf("NULL");
+	else
+		printf("%s\n", ft_strdup(s1));
 }*/

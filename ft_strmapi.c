@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:19:07 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/17 12:47:09 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:43:23 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int main(void)
 {
-    char *input = "abcd";
+    char *input = NULL;
     char *result = ft_strmapi(input, transform);
     if (result)
     {
@@ -48,9 +48,6 @@ int main(void)
         free(result);
     }
     else
-    {
         printf("Error: ft_strmapi returned NULL.\n");
-    }
-    
     return 0;
 }*/

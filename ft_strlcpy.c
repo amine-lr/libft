@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
+	if (!src || !dst)
+		return (0);
 	i = 0;
 	if (dstsize == 0)
 	{
@@ -35,19 +37,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 /*int main(void)
 {
-    char src[] = "Hello, World!";
+    char *src = "Amine";
     char dst[20];
     size_t ret;
 
-    // Copy src to dst with enough space
-    ret = ft_strlcpy(dst, src, sizeof(dst));
-    printf("Destination: '%s'\n", dst);
-    printf("Returned length of src: %zu\n", ret);
-
-    // Copy src to dst with limited space
-    ret = ft_strlcpy(dst, src, 6);  // Only room for "Hello"
-    printf("Truncated destination: '%s'\n", dst);
-    printf("Returned length of src: %zu\n", ret);
-
+	if (!src || !dst)
+		printf("NULL\n");
+	else
+	{
+    	ret = ft_strlcpy(dst, src, sizeof(dst));
+    	printf("Destination: '%s'\n", dst);
+    	printf("Returned length of src: %zu\n", ret);
+    	ret = ft_strlcpy(dst, src, 6);
+    	printf("destination: '%s'\n", dst);
+    	printf("Returned length of src: %zu\n", ret);
+	}
     return 0;
 }*/

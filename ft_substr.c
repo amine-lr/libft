@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 14:38:51 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/14 15:27:26 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:19:45 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*int main()
 {
-	char str[] = "AMine";
+	char *str = "NULL";
 	int start = 1;
 	size_t len = 2;
-	printf("%s\n",ft_substr(str,start,len));
+	char *result = ft_substr(str, start, len);
+	if (!result)
+		printf("NULL\n");
+	else
+		printf("%s\n",result);
 }*/

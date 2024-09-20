@@ -6,7 +6,7 @@
 #    By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/11 10:47:04 by mlarioui          #+#    #+#              #
-#    Updated: 2024/09/18 12:30:28 by mlarioui         ###   ########.fr        #
+#    Updated: 2024/09/20 15:43:26 by mlarioui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,11 @@ bonus:		$(OBJ) $(OBJ_B)
 			$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-			$(RM) $(OBJ) $(OBJ_B)
+			$(RM) $(OBJ) 
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus		
+.PHONY:		all clean fclean re		

@@ -108,12 +108,14 @@ char	**ft_split(char const *s, char c)
 }
 /*int main(void)
 {
-    char **result = ft_split("hello world this is libft", ' ');
+    char **result = ft_split("brouno black dog", ' ');
     int i = 0;
 
     if (!result)
-        return 1;
-
+	{
+        printf("can't split NULL");
+		return (0);
+	}
     while (result[i])
     {
         printf("%s\n", result[i]);

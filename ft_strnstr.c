@@ -6,17 +6,16 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:00:46 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/11 13:44:42 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:03:25 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
 	size_t	str2_len;
-	
+
 	if (!str1)
 		return (NULL);
 	str2_len = ft_strlen(str2);
@@ -41,6 +40,6 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 	if (result)
 		printf("found %s in %s .\n", sr2, sr1, result);
 	else
-		printf("%s not found in the first %zu characters of %s.\n", sr2, len, sr1);
+		printf("%s not found.\n", sr2);
 	return (0);
 }*/

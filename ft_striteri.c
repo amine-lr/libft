@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:54:30 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/16 15:05:22 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:25:22 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 }
 int main()
 {
-char s1 [] = "Otmane";
+char *s1= NULL;
 ft_striteri(s1,ft_toupper_ifeven);
 printf("%s",s1);
 }*/
