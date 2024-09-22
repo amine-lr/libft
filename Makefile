@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/11 10:47:04 by mlarioui          #+#    #+#              #
-#    Updated: 2024/09/20 15:43:26 by mlarioui         ###   ########.fr        #
+#    Created: 2024/04/20 15:59:04 by otboumeh          #+#    #+#              #
+#    Updated: 2024/09/21 18:26:32 by mlarioui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,13 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c
 
+SRC_B = ft_lstmap_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+
 OBJ = 	$(SRC:.c=.o)
+OBJ_B =	$(SRC_B:.c=.o)
+
 
 # **************************************************************************** #
 
@@ -45,11 +51,11 @@ bonus:		$(OBJ) $(OBJ_B)
 			$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-			$(RM) $(OBJ) 
+			$(RM) $(OBJ) $(OBJ_B)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re		
+.PHONY:		all clean fclean re bonus

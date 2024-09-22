@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 16:10:23 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/20 15:23:14 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/21 17:53:24 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*int main()
 {
 	char *s1 = "Brouno";
-	char *s2 = NULL;
+	char *s2 = "Black";
 	printf("%s",ft_strjoin(s1,s2));
 }*/
