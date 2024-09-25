@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 17:19:05 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/19 15:54:14 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:54:15 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 void	*ft_calloc(size_t num_elements, size_t elements_size)
 {
-	unsigned char	tot_size;
-	void			*dst;
+	char	*temp;
+	size_t	i;
 
-	tot_size = num_elements * elements_size;
-	dst = malloc(tot_size);
-	if (!dst)
-		return (0);
-	ft_memset(dst, 0, tot_size);
-	return (dst);
+	i = 0;
+	temp = malloc(num_elements * elements_size);
+	if (!temp)
+		return (NULL);
+	while (i < num_elements * elements_size)
+	{
+		temp[i] = 0;
+		i++;
+	}
+	return (temp);
 }
 /*int	main()
 {

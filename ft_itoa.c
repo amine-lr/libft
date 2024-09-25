@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:13:17 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/19 15:12:18 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:55:42 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,10 @@ static int	count_size(int n)
 
 	i = 0;
 	if (n == 0)
-		i = 1;
+		return (1);
 	if (n < 0)
-	{
-		n = -n;
 		i++;
-	}
-	while (n > 0)
+	while (n != 0)
 	{
 		n /= 10;
 		i++;
@@ -34,28 +31,28 @@ static int	count_size(int n)
 
 char	*ft_itoa(int num)
 {
-	size_t		len;
-	char		*str;
-	long int	n;
+	int		len;
+	char	*str;
+	long	nbr;
 
 	len = count_size(num);
-	n = num;
-	str = (char *)malloc(len + 1);
+	nbr = num;
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
-		return (NULL);
-	str[len--] = '\0';
-	if (n < 0)
+		return (0);
+	if (nbr == 0)
+		str[0] = '0';
+	if (nbr < 0)
 	{
 		str[0] = '-';
-		n = -n;
+		nbr = -nbr;
 	}
-	if (n == 0)
-		str[0] = '0';
-	while (n)
+	str[len--] = '\0';
+	while (nbr > 0)
 	{
-		str[len] = (n % 10) + '0';
-		n /= 10;
+		str[len] = (nbr % 10) + '0';
 		len--;
+		nbr /= 10;
 	}
 	return (str);
 }
@@ -63,6 +60,6 @@ char	*ft_itoa(int num)
 {
 	int n;
 
-	n = 0;
+	n = -123;
 	printf("%s", ft_itoa(n));
 }*/

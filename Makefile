@@ -6,7 +6,7 @@
 #    By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 15:59:04 by otboumeh          #+#    #+#              #
-#    Updated: 2024/09/23 12:52:53 by mlarioui         ###   ########.fr        #
+#    Updated: 2024/09/25 16:56:51 by mlarioui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,9 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC_B =  ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+SRC_B = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c ft_lsnew_bonus.c
+		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJ = 	$(SRC:.c=.o)
 OBJ_B =	$(SRC_B:.c=.o)

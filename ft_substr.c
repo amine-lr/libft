@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 14:38:51 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/20 14:19:45 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:56:07 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,34 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
+	char	*substr;
+	size_t	strlen;
 
+	strlen = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	if (start > strlen)
+	{
+		substr = malloc(1);
+		if (!substr)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
+	}
+	if (len > strlen - start)
+		len = strlen - start;
+	substr = malloc(sizeof(char) * len + 1);
+	if (!substr)
 		return (NULL);
-	if (len >= ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	str = (char *)malloc(len +1);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s + start, len + 1);
-	return (str);
+	substr[len + 1] = '\0';
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);
 }
 /*int main()
 {
 	char *str = "NULL";
-	int start = 1;
-	size_t len = 2;
+	int start = 0;
+	size_t len = 4;
 	char *result = ft_substr(str, start, len);
 	if (!result)
 		printf("NULL\n");
