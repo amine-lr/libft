@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 14:43:01 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/22 04:48:30 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:28:19 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_nod;
 
-	new_nod = (t_list *)malloc(sizeof(t_list));
+	new_nod = malloc(sizeof(t_list));
 	if (!new_nod)
 		return (NULL);
 	new_nod->content = content;

@@ -6,7 +6,7 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:41:25 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/25 17:04:37 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:20:39 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!new || !lst)
 		return ;
-	new->next = NULL;
 	last = ft_lstlast(*lst);
 	if (last)
 		last->next = new;
