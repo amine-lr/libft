@@ -6,13 +6,13 @@
 /*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 17:52:54 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/22 04:41:42 by mlarioui         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:11:04 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lsmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
 	t_list	*first_itm;
 	t_list	*tmp;
