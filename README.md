@@ -70,8 +70,6 @@ make fclean Removes object files and libft.a
 
 make re Runs fclean then all
 
-make bonus Compiles with the bonus (linked list) functions
-
 
 
 Using the Library in Your Project
