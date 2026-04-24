@@ -1,4 +1,4 @@
-*This project was created as part of the 42 curriculum by amine-lr*
+*This project was created as part of the 42 curriculum by molariou*
 
 📚 Libft:
 
