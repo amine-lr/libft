@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 13:14:07 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/27 21:57:49 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 22:15:16 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	a;
 
 	i = 0;

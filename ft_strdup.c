@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 13:14:20 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/27 22:10:39 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 22:13:02 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1) + 1;
 	dst = malloc(len);
-	if(!dst)
+	if (!dst)
 		return (NULL);
 	ft_strlcpy(dst, s1, len);
 	return (dst);
