@@ -28,6 +28,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (a == '\0')
-		return ((char *) &s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }
