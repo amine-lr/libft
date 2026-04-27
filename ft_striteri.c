@@ -32,7 +32,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 }
 int main()
 {
-char *s1= NULL;
-ft_striteri(s1,ft_toupper_ifeven);
-printf("%s",s1);
-}*/
+    char s1[] = "hello world"; // Stored in a writable array
+    ft_striteri(s1, ft_toupper_ifeven);
+    printf("%s\n", s1); // Should print "HeLlO WoRlD"
+    return (0);
+}

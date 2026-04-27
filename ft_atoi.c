@@ -14,13 +14,13 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	rst;
+	int			i;
+	int			s;
+	long long	res;
 
 	i = 0;
 	s = 1;
-	rst = 0;
+	res = 0;
 	if (!str)
 		return (0);
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\v'
@@ -34,10 +34,10 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		rst = (rst * 10) + (str[i] - '0');
+		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
-	return (rst * s);
+	return ((res * s));
 }
 /*int	main()
 {

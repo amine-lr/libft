@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 13:15:16 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/25 13:15:16 by molariou         ###   ########.fr       */
+/*   Created: 2024/09/13 13:56:20 by mlarioui          #+#    #+#             */
+/*   Updated: 2024/09/13 14:00:51 by mlarioui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dest_size;
 	size_t	src_size;
 
-	if (!src)
+	if (!src || !dst)
 		return (0);
-	if (!dst && dstsize == 0)
-		return (ft_strlen(src));
 	dest_size = ft_strlen(dst);
 	src_size = ft_strlen(src);
 	if (dstsize <= dest_size)
@@ -35,18 +33,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dest_size + i] = '\0';
 	return (dest_size + src_size);
 }
-/*int	main(void)
-{
-	char *dst = NULL;
-	char *src = NULL;
 
-	if (!dst)
-	{
-		printf("Memory allocation failed\n");
-		return (1);
-	}
-	dst[0] = '\0';
-	
-	printf("%zu\n", ft_strlcat(dst, src, 15));
-	printf("%s\n", dst);
+/*int main(void)
+{
+    char dst[20] = "Hello";
+    char *src = " World";
+
+    printf("Return: %zu\n", ft_strlcat(dst, src, 20));
+    printf("Result: %s\n", dst);
+    return (0);
 }*/

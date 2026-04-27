@@ -31,9 +31,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*int	main()
+/*
+int	main()
 {
 	const char	*str1 = "AAAA";
-	const char *str2 = NULL;
-	printf("%d",ft_strncmp(str1,str2,2));
+	const char *str2 = "AAAB";
+	printf("%d",ft_strncmp(str1,str2,5));
 }*/

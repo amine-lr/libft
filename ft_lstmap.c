@@ -12,27 +12,65 @@
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*first_itm;
-	t_list	*tmp;
+	t_list	*new_list;
+	t_list	*new_node;
+	void	*content;
 
-	if (!f || !lst)
+	if (!lst || !f || !del)
 		return (NULL);
-	first_itm = ft_lstnew(f(lst->content));
-	if (!first_itm)
-		return (NULL);
-	lst = lst->next;
+	new_list = NULL;
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
-		if (!tmp)
+		content = f(lst->content);
+		new_node = ft_lstnew(content);
+		if (!new_node)
 		{
-			ft_lstclear(&first_itm, del);
+			del(content);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&first_itm, tmp);
+		ft_lstadd_back(&new_list, new_node);
 		lst = lst->next;
 	}
-	return (first_itm);
+	return (new_list);
 }
+/*#include <ctype.h>
+// Example function to map: makes string uppercase
+void	*map_toupper(void *content)
+{
+	char	*str = ft_strdup((char *)content);
+	int		i = 0;
+	if (!str) return (NULL);
+	while (str[i])
+	{
+		str[i] = toupper(str[i]);
+		i++;
+	}
+	return (str);
+}
+
+void	del_content(void *content)
+{
+	free(content);
+}
+
+int	main(void)
+{
+	t_list *list = ft_lstnew(ft_strdup("hello"));
+	ft_lstadd_back(&list, ft_lstnew(ft_strdup("world")));
+
+	t_list *new_list = ft_lstmap(list, map_toupper, del_content);
+
+	t_list *tmp = new_list;
+	while (tmp)
+	{
+		printf("%s ", (char *)tmp->content); // Should print HELLO WORLD
+		tmp = tmp->next;
+	}
+	
+	ft_lstclear(&list, del_content);
+	ft_lstclear(&new_list, del_content);
+	return (0);
+}*/

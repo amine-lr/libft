@@ -16,29 +16,26 @@ char	*ft_strdup(const char *s1)
 {
 	char	*dst;
 	size_t	len;
-	size_t	i;
 
 	if (!s1)
 		return (NULL);
-	i = 0;
 	len = ft_strlen(s1);
 	dst = (char *) malloc(len + 1);
 	if (dst == NULL)
 		return (NULL);
-	while (s1[i])
-	{
-		dst[i] = s1[i];
-		i++;
-	}
-	dst[i] = 0;
+	ft_memcpy(dst, s1, len);
 	return (dst);
 }
-/*int	main()
+/*int main()
 {
-	char	*s1 = NULL;
-	
-	if (!s1)
-		printf("NULL");
-	else
-		printf("%s\n", ft_strdup(s1));
+    char *s1 = NULL;
+    char *copy;
+
+    copy = ft_strdup(s1);
+    if (copy)
+    {
+        printf("Original: %s\n", s1);
+        printf("Copy:     %s\n", copy);
+        free(copy);
+    }
 }*/

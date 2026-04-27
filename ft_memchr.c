@@ -30,15 +30,23 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/*int main()
+/*t main(void)
 {
-    char    *data = NULL;
-    char    *rst ;
+    char    *str = "Find the needle";
+    char    *rst;
 
-    rst = (char *)ft_memchr(data, 'l', 10);
+    rst = (char *)ft_memchr(str, 'n', 15);
     if (rst)
-        printf("found the characther at position : %ld\n", rst - data);
-	else
-		printf("charachter not found");
+        printf("Found 'n' at index: %ld\n", rst - str);
+
+    rst = (char *)ft_memchr(str, 'e', 5);
+    if (!rst)
+        printf(" not found within first 5 bytes\n");
+
+    char data[] = {1, 2, 0, 4, 5};
+    rst = ft_memchr(data, 0, 5);
+    if (rst)
+        printf("Found the 0 byte at index: %ld\n", rst - data);
+
     return (0);
 }*/

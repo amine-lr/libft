@@ -35,19 +35,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 /*char transform(unsigned int index, char c)
 {
-    return (char)ft_toupper(c + index);
+    // Shift character forward by its index (A becomes A, B becomes C, etc.)
+    return (c + index);
 }
 
 int main(void)
 {
-    char *input = NULL;
+    char *input = "abcde";
     char *result = ft_strmapi(input, transform);
+    
     if (result)
     {
-        printf("Transformed string: %s\n", result);
+        printf("Original:    %s\n", input);
+        printf("Transformed: %s\n", result); // Should be "acegi"
         free(result);
     }
-    else
-        printf("Error: ft_strmapi returned NULL.\n");
-    return 0;
+    return (0);
+}
 }*/
