@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 20:17:35 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/27 20:17:36 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 21:57:48 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	tr_len;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
-	if (!set)
-		return (ft_strdup(s1));
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;

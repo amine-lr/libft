@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 13:14:20 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/25 13:14:21 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 22:10:39 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@ char	*ft_strdup(const char *s1)
 	char	*dst;
 	size_t	len;
 
-	if (!s1)
+	len = ft_strlen(s1) + 1;
+	dst = malloc(len);
+	if(!dst)
 		return (NULL);
-	len = ft_strlen(s1);
-	dst = (char *) malloc(len + 1);
-	if (dst == NULL)
-		return (NULL);
-	ft_memcpy(dst, s1, len);
+	ft_strlcpy(dst, s1, len);
 	return (dst);
 }
 /*int main()
