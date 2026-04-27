@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 14:05:54 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 14:09:50 by mlarioui         ###   ########.fr       */
+/*   Created: 2026/04/25 13:10:40 by molariou          #+#    #+#             */
+/*   Updated: 2026/04/25 13:10:40 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /*int main()
 {
     char    *data = NULL;

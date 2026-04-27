@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 14:05:59 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 14:16:50 by mlarioui         ###   ########.fr       */
+/*   Created: 2026/04/25 13:11:02 by molariou          #+#    #+#             */
+/*   Updated: 2026/04/25 13:11:02 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
 /*int main()
 {
     char    *s1 = "bbla";

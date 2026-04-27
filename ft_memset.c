@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 14:02:39 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/13 14:04:59 by mlarioui         ###   ########.fr       */
+/*   Created: 2026/04/25 13:12:18 by molariou          #+#    #+#             */
+/*   Updated: 2026/04/25 13:12:18 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	}
 	return (ptr);
 }
+
 /*int main(void) 
 {
 	char str[] = "Brouno";

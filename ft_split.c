@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 08:53:06 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/18 08:53:06 by mlarioui         ###   ########.fr       */
+/*   Created: 2026/04/25 13:13:59 by molariou          #+#    #+#             */
+/*   Updated: 2026/04/25 13:13:59 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (result);
 }
+
 /*int main(void)
 {
     char **result = ft_split("brouno black dog", ' ');
