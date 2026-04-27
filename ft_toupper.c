@@ -18,14 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/*int	main()
-{
-	char ch = 'r';
-
-	if (!ch)
-		printf("NULL");
-	else
-    	printf("Uppercase of %c is %c\n", ch, ft_toupper(ch));
-    return (0);
-}*/

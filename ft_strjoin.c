@@ -33,16 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str, s2, tot_len + 1);
 	return (str);
 }
-/*t main()
-{
-    char *s1 = "Brouno";
-    char *s2 = "Black";
-    char *res = ft_strjoin(s1, s2);
-    
-    if (res)
-    {
-        printf("%s\n", res);
-        free(res); // Clean up!
-    }
-    return (0);
-}*/

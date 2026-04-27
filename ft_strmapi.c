@@ -33,23 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[len] = '\0';
 	return (str);
 }
-/*char transform(unsigned int index, char c)
-{
-    // Shift character forward by its index (A becomes A, B becomes C, etc.)
-    return (c + index);
-}
-
-int main(void)
-{
-    char *input = "abcde";
-    char *result = ft_strmapi(input, transform);
-    
-    if (result)
-    {
-        printf("Original:    %s\n", input);
-        printf("Transformed: %s\n", result); // Should be "acegi"
-        free(result);
-    }
-    return (0);
-}
-}*/

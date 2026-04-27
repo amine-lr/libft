@@ -37,16 +37,5 @@ int	ft_atoi(const char *str)
 		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
-	return ((res * s));
+	return (res * s);
 }
-/*int	main()
-{
-	const char	*str1 = NULL;
-	const char	*str2 = "      \n	-2465rfrrg";
-
-	int	num1 = ft_atoi(str1);
-	int	num2 = ft_atoi(str2);
-	printf("converted number : %d\n", num1);
-	printf("converted number : %d\n", num2);
-	return (0);
-}*/

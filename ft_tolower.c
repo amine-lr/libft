@@ -18,13 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-/*int main() {
-    char ch = 0;
-    
-    if (!ch)
-		printf("NULL");
-	else
-    printf(" %c\n", ft_tolower(ch));
-    return 0;
-}*/

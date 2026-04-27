@@ -25,15 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-/*void ft_toupper_ifeven(unsigned int i, char *c)
-{
-	if (i % 2 == 0)
-        *c = ft_toupper(*c);
-}
-int main()
-{
-    char s1[] = "hello world"; // Stored in a writable array
-    ft_striteri(s1, ft_toupper_ifeven);
-    printf("%s\n", s1); // Should print "HeLlO WoRlD"
-    return (0);
-}*/
