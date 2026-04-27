@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlarioui <mlarioui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:56:48 by mlarioui          #+#    #+#             */
-/*   Updated: 2024/09/16 12:59:04 by mlarioui         ###   ########.fr       */
+/*   Created: 2026/04/27 20:01:18 by molariou          #+#    #+#             */
+/*   Updated: 2026/04/27 20:01:18 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "libft.h"
 

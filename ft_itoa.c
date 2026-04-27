@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:24:47 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/25 14:24:48 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:54:29 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int num)
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[len] = '\0'; // Set null terminator at the very end first
+	str[len] = '\0';
 	if (nbr == 0)
 		str[0] = '0';
 	if (nbr < 0)
@@ -48,7 +48,7 @@ char	*ft_itoa(int num)
 		str[0] = '-';
 		nbr = -nbr;
 	}
-	len--; // Move to the last digit position
+	len--;
 	while (nbr > 0)
 	{
 		str[len--] = (nbr % 10) + '0';

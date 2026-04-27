@@ -6,7 +6,7 @@
 /*   By: molariou <molariou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 13:14:46 by molariou          #+#    #+#             */
-/*   Updated: 2026/04/25 13:14:47 by molariou         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:52:24 by molariou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ int main()
     ft_striteri(s1, ft_toupper_ifeven);
     printf("%s\n", s1); // Should print "HeLlO WoRlD"
     return (0);
-}
+}*/
