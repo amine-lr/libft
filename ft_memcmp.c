@@ -29,17 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int main()
-{
-    char    *s1 = "bbla";
-    char    *s2 = "blabl";
-    int rst = ft_memcmp(s1, s2, 10);
-    if (rst == 0)
-        printf ("the memory block are equal.\n");
-     else if (rst < 0)
-        printf("str1 is less than str2.\n");
-    else
-        printf("str1 is greater than str2.\n");
-    return 0;
-}*/

@@ -23,12 +23,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*int	main()
-{
-	char	str[] = "Brouno";
-	int 	i = 2;
-
-	ft_bzero(str, i);
-	printf("%s\n", str);
-	return (0);
-}*/

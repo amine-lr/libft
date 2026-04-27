@@ -20,22 +20,9 @@ char	*ft_strdup(const char *s1)
 	if (!s1)
 		return (NULL);
 	len = ft_strlen(s1);
-	dst = (char *) malloc(len + 1);
-	if (dst == NULL)
+	dst = (char *)malloc(len + 1);
+	if (!dst)
 		return (NULL);
-	ft_memcpy(dst, s1, len);
+	ft_memcpy(dst, s1, len + 1);
 	return (dst);
 }
-/*int main()
-{
-    char *s1 = NULL;
-    char *copy;
-
-    copy = ft_strdup(s1);
-    if (copy)
-    {
-        printf("Original: %s\n", s1);
-        printf("Copy:     %s\n", copy);
-        free(copy);
-    }
-}*/

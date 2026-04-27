@@ -23,12 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-
-/*int main()
-{
-    t_list *new_elem = ft_lstnew("Hello, world!");
-    if (new_elem)
-        printf("node created.\n");
-    return 0;
-}
-*/

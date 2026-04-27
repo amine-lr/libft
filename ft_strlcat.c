@@ -15,31 +15,21 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	dest_size;
-	size_t	src_size;
+	size_t	dst_len;
+	size_t	src_len;
 
-	if (!src || !dst)
-		return (0);
-	dest_size = ft_strlen(dst);
-	src_size = ft_strlen(src);
-	if (dstsize <= dest_size)
-		return (src_size + dstsize);
+	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dstsize <= dst_len)
+		return (src_len + dstsize);
 	i = 0;
-	while (src[i] && (dest_size + i) < (dstsize - 1))
+	while (src[i] && (dst_len + i) < (dstsize - 1))
 	{
-		dst[dest_size + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[dest_size + i] = '\0';
-	return (dest_size + src_size);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
-
-/*int main(void)
-{
-    char dst[20] = "Hello";
-    char *src = " World";
-
-    printf("Return: %zu\n", ft_strlcat(dst, src, 20));
-    printf("Result: %s\n", dst);
-    return (0);
-}*/

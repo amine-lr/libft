@@ -31,7 +31,7 @@ static char	**ft_wordcount_allocat(const char *s, char c)
 			in_word = 0;
 		s++;
 	}
-	result = (char **)malloc((count +1) * sizeof(char *));
+	result = (char **)malloc((count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	return (result);
@@ -106,23 +106,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (result);
 }
-
-/*int main(void)
-{
-    char **result = ft_split("brouno black dog", ' ');
-    int i = 0;
-
-    if (!result)
-	{
-        printf("can't split NULL");
-		return (0);
-	}
-    while (result[i])
-    {
-        printf("%s\n", result[i]);
-        free(result[i++]);
-    }
-    free(result);
-
-    return 0;
-}*/

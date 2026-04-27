@@ -19,15 +19,7 @@ size_t	ft_strlen(const char *s)
 	if (!s)
 		return (0);
 	i = 0;
-	while (s[i] != ('\0'))
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
-
-/*int main()
-{
-    char *s =NULL;
-	int rst = ft_strlen(s);
-	printf ("the lenght of s is %d\n", rst);
-	return (0);
-}*/

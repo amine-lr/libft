@@ -18,13 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*int	main()
-{
-	int	space = ' ';
-	int	notprint = 0;
-
-	printf("%d.\n", ft_isprint(space));
-	printf("%d.\n", ft_isprint(notprint));
-	return (0);
-}*/
