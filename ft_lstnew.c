@@ -16,6 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
+	if (!content)
+		return (NULL);
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);
@@ -26,9 +28,14 @@ t_list	*ft_lstnew(void *content)
 
 /*int main()
 {
-    t_list *new_elem = ft_lstnew("Hello, world!");
+    t_list *new_elem = ft_lstnew(NULL);
+
+	if (!new_elem)
+		printf("Failed to create node with NULL content.\n");
+	else
+		printf("Node created with NULL content, which is unexpected.\n");
     if (new_elem)
         printf("node created.\n");
     return 0;
-}
-*/
+}*/
+

@@ -18,6 +18,8 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	a;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	a = (unsigned char)c;
 	while (s[i])
 	{
@@ -29,13 +31,12 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) &s[i]);
 	return (NULL);
 }
-/*int main()
+/*
+int main()
 {
-    char c = 'l';
-    const char *s= "amine bla";
+    char c = 'a';
+    const char *s= NULL; // Test with NULL string
 
-	if (!s)
-		printf ("NULL");
     char    *rslt = ft_strchr(s, c);
     if (rslt != NULL)
         printf("Character %c found in %s: %s\n", c, s, rslt);

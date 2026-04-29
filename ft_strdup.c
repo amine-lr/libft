@@ -17,23 +17,28 @@ char	*ft_strdup(const char *s1)
 	char	*dst;
 	size_t	len;
 
-	len = ft_strlen(s1) + 1;
+    if (!s1)
+        return (NULL);
+    len = ft_strlen(s1) + 1;
 	dst = malloc(len);
 	if (!dst)
 		return (NULL);
 	ft_strlcpy(dst, s1, len);
 	return (dst);
 }
-/*int main()
+/*
+int main()
 {
     char *s1 = NULL;
     char *copy;
 
     copy = ft_strdup(s1);
-    if (copy)
-    {
-        printf("Original: %s\n", s1);
+
+    printf("Original: %s\n", s1);
+    if (!copy)
+        printf("Failed to duplicate NULL string.\n");
+    else
         printf("Copy:     %s\n", copy);
-        free(copy);
-    }
+    free(copy);
+    return (0);
 }*/

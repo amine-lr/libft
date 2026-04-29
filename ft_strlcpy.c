@@ -14,41 +14,36 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	size_t	src_len;
 	size_t	i;
 
-	i = 0;
+	if (!src)
+		return (0);
+	src_len = ft_strlen(src);
 	if (dstsize == 0)
-	{
-		while (src[i])
-			i++;
-		return (i);
-	}
-	while (i < dstsize -1 && src[i] != '\0')
+		return (src_len);
+
+	i = 0;
+	while (src[i] && i < (dstsize - 1))
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	return (src_len);
 }
-/*int main(void)
+/*
+int main(void)
 {
     char *src = "Amine";
     char dst[20];
     size_t ret;
 
-	if (!src || !dst)
-		printf("NULL\n");
-	else
-	{
-    	ret = ft_strlcpy(dst, src, sizeof(dst));
-    	printf("Destination: '%s'\n", dst);
-    	printf("Returned length of src: %zu\n", ret);
-    	ret = ft_strlcpy(dst, src, 6);
-    	printf("destination: '%s'\n", dst);
-    	printf("Returned length of src: %zu\n", ret);
-	}
-    return 0;
+	ret = ft_strlcpy(dst, src, sizeof(dst));
+    printf("Destination: '%s'\n", dst);
+	printf("Returned length of src: %zu\n", ret);
+	ret = ft_strlcpy(dst, src, 6);
+    printf("destination: '%s'\n", dst);
+    printf("Returned length of src: %zu\n", ret);
+	return 0;
 }*/

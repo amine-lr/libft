@@ -16,30 +16,33 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
 	size_t	str2_len;
 
+	if (!str2)
+		return (NULL);
 	if (!str1)
 		return (NULL);
 	str2_len = ft_strlen(str2);
-	if (*str2 == '\0' || str2_len == 0)
-		return ((char *) str1);
 	while (*str1 != '\0' && len >= str2_len)
 	{
-		if (ft_strncmp(str1, str2, str2_len) == 0)
+		if (*str1 == *str2 && ft_strncmp(str1, str2, str2_len) == 0)
 			return ((char *)str1);
 		str1++;
 		len--;
 	}
 	return (NULL);
 }
-/*int	main()
+/*int main()
 {
-	const char *sr1 = NULL;
-	const char *sr2 = "black";
-	size_t len = 9;
-	char	*result = ft_strnstr(sr1, sr2, len);
-	
-	if (result)
-		printf("found %s in %s .\n", sr2, sr1, result);
-	else
-		printf("%s not found.\n", sr2);
-	return (0);
+    const char *sr1 = "BLACK";
+    const char *sr2 = NULL;
+    size_t len = 9;
+    char *result = ft_strnstr(sr1, sr2, len);
+    
+    if (result)
+        printf("Found: %s\n", result);
+    else
+    {
+        // Safe check: print "NULL" as a string if the pointer is NULL
+        printf("'%s' not found in %s.\n", sr2, sr1 ? sr1 : "NULL");
+    }
+    return (0);
 }*/

@@ -38,9 +38,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*int main()
 {
-	char *str = "NULL";
-	int start = 0;
-	size_t len = 4;
+	char *str = "AMINE";
+	int start = 3;
+	size_t len = 1;
 	char *result = ft_substr(str, start, len);
 	if (!result)
 		printf("NULL\n");

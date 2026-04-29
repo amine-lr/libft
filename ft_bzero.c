@@ -29,6 +29,6 @@ void	ft_bzero(void *s, size_t n)
 	int 	i = 2;
 
 	ft_bzero(str, i);
-	printf("%s\n", str);
+	printf("Result: %s\n", &str[i]);
 	return (0);
 }*/

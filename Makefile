@@ -31,7 +31,6 @@ SRC = ft_atoi.c ft_lstdelone.c ft_putendl_fd.c ft_strncmp.c ft_bzero.c \
  
 
 OBJ = 	$(SRC:.c=.o)
-OBJ_B =	$(SRC_B:.c=.o)
 
 
 # **************************************************************************** #

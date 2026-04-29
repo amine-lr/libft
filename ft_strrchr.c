@@ -17,6 +17,8 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
@@ -29,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int	main(void)
 {
-	const char *str = "tripouille";
+	const char *str = NULL;
 
 	// Test 1: Find 'i' (should find the second 'i')
 	printf("Last 'i': %s\n", ft_strrchr(str, 'i'));

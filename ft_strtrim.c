@@ -31,9 +31,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	tr_len = len - i;
 	return (ft_substr(s1, i, tr_len));
 }
-/*int	main ()
+/*
+int	main ()
 {
-	char *str = "amine";
+	char *str = "amineam";
 	char *set = NULL;
 	printf("%s", ft_strtrim(str,set));
 }*/

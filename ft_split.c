@@ -106,10 +106,10 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (result);
 }
-
-/*int main(void)
+/*
+int main(void)
 {
-    char **result = ft_split("brouno black dog", ' ');
+    char **result = ft_split(NULL, ' ');
     int i = 0;
 
     if (!result)

@@ -18,7 +18,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dest_size;
 	size_t	src_size;
 
-	dest_size = ft_strlen(dst);
+	if (!src || (!dst && dstsize > 0))
+		return (0);
+	while (dst && dest_size < dstsize && dst[dest_size])
+        dest_size++;
 	src_size = ft_strlen(src);
 	if (dstsize <= dest_size)
 		return (src_size + dstsize);
@@ -34,8 +37,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 /*int main(void)
 {
-    char dst[20] = "Hello";
-    char *src = " World";
+    char dst[20] = {0};
+    char *src = NULL;
 
     printf("Return: %zu\n", ft_strlcat(dst, src, 20));
     printf("Result: %s\n", dst);
