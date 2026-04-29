@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
 	size_t	str2_len;
 
-	if (!str2)
-		return (NULL);
+	if (!str2 || !*str2)
+		return ((char *)str1);
 	if (!str1)
 		return (NULL);
 	str2_len = ft_strlen(str2);
@@ -32,8 +32,8 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 }
 /*int main()
 {
-    const char *sr1 = "BLACK";
-    const char *sr2 = NULL;
+    const char *sr1 = NULL;
+    const char *sr2 = "NULL";
     size_t len = 9;
     char *result = ft_strnstr(sr1, sr2, len);
     

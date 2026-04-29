@@ -38,4 +38,3 @@ t_list	*ft_lstnew(void *content)
         printf("node created.\n");
     return 0;
 }*/
-

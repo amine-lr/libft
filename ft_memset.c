@@ -17,10 +17,10 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	size_t			i;
 	unsigned char	*void_ptr;
 
-	void_ptr = (unsigned char *)ptr;
-	i = 0;
 	if (!ptr)
 		return (NULL);
+	void_ptr = (unsigned char *)ptr;
+	i = 0;
 	while (i < len)
 	{
 		void_ptr[i] = c;
@@ -28,11 +28,11 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	}
 	return (ptr);
 }
-/*
-int main(void) 
+
+/*int main(void) 
 {
-	//ar str[] = "Brouno";
-	char *str = NULL; 
+	char str[] = "Hello, World!";
+	char *str_ptr = NULL; 
 
 	ft_memset(str, '8', 5);
 	if (!str)
