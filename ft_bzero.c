@@ -16,6 +16,8 @@ void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (i < n)
 	{
@@ -23,12 +25,20 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*int	main()
+/*int main(void)
 {
-	char	str[] = "Brouno";
-	int 	i = 2;
+    char    *str = NULL;
+    int     len = 5;
 
-	ft_bzero(str, i);
-	printf("Result: %s\n", &str[i]);
-	return (0);
+    printf("--- Testing ft_bzero with NULL ---\n");
+    ft_bzero(str, len);
+    printf("1. ft_bzero called successfully (no crash).\n");
+    if (str == NULL)
+    {
+        printf("2. Pointer is still NULL as expected.\n");
+    }
+    else
+      printf("2. Result: %s\n", str);
+    printf("--- Test Complete ---\n");
+    return (0);
 }*/

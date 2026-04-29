@@ -33,8 +33,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
     int    *real_arr;
     size_t i;
 
-    my_arr = (int *)ft_calloc(num, sizeof(int));
-    real_arr = (int *)calloc(num, sizeof(int));
+    my_arr = ft_calloc(num, sizeof(int));
+    real_arr = calloc(num, sizeof(int));
 
     if (!my_arr || !real_arr)
         return (1);
@@ -50,5 +50,41 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
     free(my_arr);
     free(real_arr);
+    return (0);
+}*/
+/*#include <stdint.h> // For SIZE_MAX
+
+int main(void)
+{
+    void *ptr;
+
+    printf("--- Testing ft_calloc Edge Cases ---\n");
+
+    // Test 1: Zero nmemb or Zero size
+    // Standard calloc returns either NULL or a unique pointer you can free.
+    ptr = ft_calloc(0, 10);
+    printf("1. ft_calloc(0, 10): %p\n", ptr);
+    free(ptr);
+
+    // Test 2: Potential Overflow
+    // This should return NULL because the total exceeds size_t
+    ptr = ft_calloc(SIZE_MAX, 2);
+    if (ptr == NULL)
+        printf("2. Overflow check: PASSED (Returned NULL)\n");
+    else
+    {
+        printf("2. Overflow check: FAILED (Allocated memory incorrectly)\n");
+        free(ptr);
+    }
+
+    // Test 3: Standard NULL failure test
+    // We can't easily force malloc to fail, but we can try to allocate 
+    // an impossible amount of memory.
+    ptr = ft_calloc(1, (size_t)-1); // Max possible size_t
+    if (ptr == NULL)
+        printf("3. Impossible allocation: PASSED (Returned NULL)\n");
+    else
+        free(ptr);
+
     return (0);
 }*/

@@ -56,20 +56,28 @@ char	*ft_itoa(int num)
 	}
 	return (str);
 }
-/*int	main()
+/*int main(void)
 {
-	int n = -2147483648;
-	char *res = ft_itoa(n);
-	printf("Min Int: %s\n", res); // Must be -2147483648
-	free(res);
+    int     n;
+    char    *res;
 
-	int n = 0;
-	char *res = ft_itoa(n);
-	printf("Zero: [%s]\n", res); // Must be [0], not empty or garbage
-	free(res);
+    // Test 1: Minimum Int
+    n = -2147483648;
+    res = ft_itoa(n);
+    printf("Test Min: %s\n", res);
+    free(res);
 
-	int n = -5;
-	char *res = ft_itoa(n);
-	printf("Negative: %s\n", res); // Must be -5
-	free(res);
+    // Test 2: Zero
+    n = 0;
+    res = ft_itoa(n);
+    printf("Test Zero: %s\n", res);
+    free(res);
+
+    // Test 3: Negative
+    n = -5;
+    res = ft_itoa(n);
+    printf("Test Neg: %s\n", res);
+    free(res);
+
+    return (0);
 }*/

@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	s = 1;
 	res = 0;
+	if (!str)
+		return (0);
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\v'
 		|| str[i] == '\t' || str[i] == '\f' || str[i] == '\r')
 		i++;
@@ -37,7 +39,8 @@ int	ft_atoi(const char *str)
 	}
 	return ((res * s));
 }
-/*int	main()
+/*
+int	main()
 {
 	const char	*str1 = NULL;
 	const char	*str2 = "      \n	-2465rfrrg";
