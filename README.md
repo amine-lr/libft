@@ -1,8 +1,8 @@
 *This project was created as part of the 42 curriculum by molariou*
 
-📚 Libft:
+# 📚 Libft
 
-📖 **Description:**
+## 📖 Description
 
 libft is a foundational C project from the 42 curriculum. The goal is to reimplement a set of standard C library functions from scratch, and to build additional utility functions that will serve as a personal toolkit for future projects.
 
@@ -20,21 +20,21 @@ typedef struct s_list
 } t_list
 ```
 
-🛠️ **Instructions:**
+## 🛠️ Instructions
 
-📥 **Compilation:**
+### 📥 Compilation
 
 Clone the repository and run make at the root:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/amine-lr/libft.git
 cd libft
 make
 ```
 
 This will compile all source files and create the libft.a static library at the root of the repository.
 
-⚙️ **Available Makefile Rules:**
+### ⚙️ Available Makefile Rules
 
 | Command | Description |
 |---------|-------------|
@@ -43,7 +43,7 @@ This will compile all source files and create the libft.a static library at the 
 | `make fclean` | Removes object files and libft.a |
 | `make re` | Runs fclean then all |
 
-💻 **Using the Library in Your Project**
+## 💻 Using the Library in Your Project
 
 After compiling, link libft.a with your project:
 
@@ -57,14 +57,14 @@ Include the header in your source files:
 #include "libft.h"
 ```
 
-📚 **Resources:**
+## 📚 Resources
 
 * 📖 C Standard Library — man pages
 * 🧠 [Memory management in C — malloc, free, calloc](https://www.geeksforgeeks.org/c/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
 * 🔗 [Linked lists — GeeksForGeeks](https://www.geeksforgeeks.org/dsa/linked-list-data-structure/)
 * 🤖 Gemini AI
 
-🤖 **AI Usage**
+## 🤖 AI Usage
 
 AI was used in this project in the following ways, in accordance with the 42 AI policy:
 
